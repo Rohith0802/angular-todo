@@ -1,0 +1,35 @@
+<div id="task-background" class="task-background">
+    <div *ngFor="let task of tasks" id="`task-${task.id}`" class="task-hover">
+        <ng-template [ngIf]="!task.isCompleted">
+            <div class="check">
+                <i [ngClass]="task.isCompleted ? 'fa fa-check-circle' : 'fa fa-circle-o'"></i>
+            </div>
+            <div class="task-name-and-meta-data">
+                <div class="task-name">
+                    {{task.name}}
+                </div>
+            </div>
+            <div class="star">
+                <i [ngClass]="task.isImportant ? 'fa fa-star' : 'fa fa-star-o'"></i>
+            </div>
+        </ng-template>
+
+        <ng-template #inCompletedTask>
+            <div class="check">
+                <i class='fa fa-circle-o'></i>
+            </div>
+            <div class="task-name-and-meta-data">
+                <div class="task-name">
+                    {{task.name}}
+                </div>
+            </div>
+            <div class="star">
+                <i class="task.isImportant ? 'fa fa-star' : 'fa fa-star-o'"></i>
+            </div>
+        </ng-template>
+    </div>
+
+    <div *ngIf="">
+
+    </div>
+</div>

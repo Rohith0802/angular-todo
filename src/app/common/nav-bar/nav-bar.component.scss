@@ -1,0 +1,78 @@
+.top-nav {
+    height: 8.3%;
+    background-color: #2564cf;
+
+    .side-nav, .setting, .help, .whats-new, .user {
+        display: inline-block;
+        height: 100%;
+        width: 3.8%;
+        text-align: center;
+        vertical-align: top;
+
+        i {
+            margin-top: 30%;
+            font-size: 20px;
+            color: white;
+        }
+    }
+
+    .side-nav:hover, .setting:hover, .help:hover, .whats-new:hover, .user:hover {
+        background-color: #005a9e;
+    }
+
+    .to-do {
+        display: inline-block;
+        width: 4.9%;
+        height: 100%;
+        text-align: center;
+        font-size: medium;
+
+        a {
+            display: inline-block;
+            margin-top: 23%;
+            color: white;
+            font-weight: 200;
+            font-weight: 600;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .search-bar {
+        display: inline-block;
+        width: 73.7%;
+        height: 100%;
+        background-color: #2564cf;
+        vertical-align: top;
+        text-align: center;
+    
+        .search-box {
+            display: inline-block;
+            width: 42%;
+            height: 70%;
+            margin-top: 0.6%;
+            background-color: white;
+            border-radius: 5px;
+    
+            .search-button, .search {
+                width: 8%;
+                height: 100%;
+                border: none;
+                border-radius: 5px;
+                color: #4b78d2;
+                background-color: white;
+                font-weight: 500;
+            }
+            
+            .search {
+                width: 90.9%;
+                color: black;
+                outline: none;
+            }
+        }
+    }
+}
