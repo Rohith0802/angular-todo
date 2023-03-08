@@ -1,0 +1,114 @@
+.login-page {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    // background-image: linear-gradient(to left, rgb(49, 112, 239), rgb(119, 158, 237), rgb(49, 112, 239));
+    background-image: url(https://i.pinimg.com/originals/29/38/a3/2938a3b0772876c56082d65731c23692.gif);
+    background-position: center;
+    background-size: cover;
+
+    .login-form {
+        height: 85%;
+        width: 30%;
+        display: inline-block;
+        overflow: hidden;
+        margin: 3% 0% 3% 13%;
+        flex-direction: column;
+        background-color: #f1f1f1;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        opacity: 0.9;
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            color: #000;
+            margin: 15px auto;
+            opacity: 0.9;
+        }
+
+        label {
+            display: inline-block;
+            font-size: 15px;
+            color: gray;
+            margin: 5% 9% 0% 9%;
+            opacity: 0.9;
+        }
+
+        .textfield {
+            border: none;
+            width: 80%;
+            height: 5%;
+            font-size: medium;
+            margin: 3% 9%;
+            background-color: transparent;
+            outline: none;
+            border-bottom: 1px solid rgb(179, 179, 179);
+            color: #000;
+        }
+
+        .submitbutton {
+            width: 50%;
+            height: 10%;
+            border: 0px;
+            outline: 0px;
+            border-radius: 30px;
+            margin: 7% 25% 3% 25%;
+            color: #f5f5f5;
+            cursor: pointer;
+            background-size: 200%;
+            background-image: linear-gradient(to left, rgb(119, 158, 237), rgb(49, 112, 239), rgb(119, 158, 237));
+            transition: 0.6s;
+        }
+
+        .submitbutton:hover {
+            background-position: right;
+        }
+
+        .forgotpassword {
+            font-size: smaller;
+            margin-left: 55%;
+            margin-bottom: 10px;
+            color: #00f;
+            cursor: pointer;
+            justify-content: left;
+            align-items: left;
+        }
+
+        .or {
+            margin: 1% 48%;
+            font-size: smaller;
+        }
+
+        .signup {
+            display: inline-block;
+            margin: 2% 43%;
+            font-size: smaller;
+            color: #00f;
+        }
+
+        a {
+            display: inline-block;
+            margin: 3% 48%;
+            text-decoration: none;
+        }
+    }
+
+    .login-quote {
+        display: inline-block;
+        height: 85%;
+        width: 40%;
+        background-color: grey;
+        vertical-align: top;
+        margin: 3% 0%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}

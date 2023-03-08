@@ -1,0 +1,18 @@
+<div class="login-page">
+    <div class="login-form">
+        <h1>Login</h1>
+        <label for="emailId">Email Id</label>
+        <input type="text" [(ngModel)]="emailId" class="textfield" name="emailId" placeholder="Email" required />
+        <label for="password">Password</label>
+        <input type="password" [(ngModel)]="password" class="textfield" name="password" placeholder="Password"
+            required />
+        <a class="forgotpassword">Forgotpassword?</a>
+        <button (click)="login()" class="submitbutton">Submit</button>
+        <label class="or" for="signup">Or</label>
+        <a class="signup" routerLink="sign-up" id="signup">Sign Up</a>
+    </div>
+    <div class="login-quote">
+        <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2022/04/106032482.jpeg?auto=format&q=60&w=1280&h=1280&fit=crop&crop=faces"
+            alt="">
+    </div>
+</div>

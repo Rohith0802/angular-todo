@@ -1,0 +1,51 @@
+<div *ngIf="isVisible" class="display-right-container">
+    <div class="task-and-steps">
+        <div class="right-task">
+            <div class="completed" (click)="updateCompleteStatus()">
+                <i [ngClass]="(selectedTask.isCompleted) ? 'fa fa-check-circle' : 'fa fa-circle-o'"></i>
+            </div>
+            <input [appStrikeThrough]="selectedTask.isCompleted" type="text" class="right-task-name"
+                [(ngModel)]="taskName" (blur)="updateTaskName()">
+            <div class="important" (click)="updateImportantStatus()">
+                <i [ngClass]="(selectedTask.isImportant) ? 'fa fa-star' : 'fa fa-star-o'"></i>
+            </div>
+        </div>
+        <div class="task-details">
+            <div class="add-step">
+                <i class="fa fa-genderless"></i>
+                <input placeholder="Add step" type="text">
+            </div>
+            <button class="add-to-my-day">
+                <i class="fa fa-sun-o"></i>Add to My Day
+            </button>
+            <div class="remainder">
+                <div class="notify">
+                    <i class="fa fa-bell-o"></i>Remind me
+                </div>
+                <div class="notify">
+                    <i class="fa fa-calendar-o"></i>Add due date
+                </div>
+                <div class="notify">
+                    <i class="fa fa-retweet"></i>Repeat
+                </div>
+            </div>
+            <div class="pick-category">
+                <i class="fa fa-tag"></i><input placeholder="Pick a category" type="text">
+            </div>
+            <div class="add-file">
+                <i class="fa fa-paperclip"></i> Add file
+            </div>
+            <div class="note">
+                <textarea type="" id="add-note" [(ngModel)]="taskNote" (blur)="updateTaskNote()" class="add-note"
+                    contenteditable="true" placeholder="Add note">{{ selectedTask.note }}</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="right-container-footer">
+        <button id="close-task" (click)="closeTaskDetails()"><i class="fa fa-toggle-right"></i></button>
+        <div class="created-on">
+            created today
+        </div>
+        <button><i class="fa fa-trash-o"></i></button>
+    </div>
+</div>

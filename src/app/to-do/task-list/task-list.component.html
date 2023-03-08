@@ -1,0 +1,43 @@
+<div id="task-background" class="task-background">
+    <div *ngFor="let task of inCompletedTasks" id="`task-${task.id}`" class="task-hover">
+        <div (click)="toggleCompletedStatus(task)" class="check">
+            <i [ngClass]="task.isCompleted ? 'fa fa-check-circle' : 'fa fa-circle-o'"></i>
+        </div>
+        <div class="task-name-and-meta-data" (click)="displayTaskDetails(task)">
+            <div [appStrikeThrough]="task.isCompleted" class="task-name">
+                {{task.name}}
+            </div>
+        </div>
+        <div (click)="toggleImportantStatus(task)" class="star">
+            <i [ngClass]="task.isImportant ? 'fa fa-star' : 'fa fa-star-o'"></i>
+        </div>
+    </div>
+
+    <ng-container *ngIf="selectedCategoryId !== 2">
+        <div *ngIf="completedTasks.length != 0" (click)="toggleCompletedHiddenStatus()" class="completed-button">
+            <span [ngClass]="(isCompletedTaskHidden)?'hide-complete':'show-complete'">
+                <i class="fa fas fa-sort-down"></i>
+            </span>
+            <span>Completed</span>
+            <span class="completed-count">{{completedTasks.length}}</span>
+        </div>
+
+        <ng-container *ngIf="!isCompletedTaskHidden">
+            <ng-container *ngFor="let task of completedTasks">
+                <div id="`task-${task.id}`" class="task-hover">
+                    <div (click)="toggleCompletedStatus(task)" class="check">
+                        <i [ngClass]="task.isCompleted ? 'fa fa-check-circle' : 'fa fa-circle-o'"></i>
+                    </div>
+                    <div class="task-name-and-meta-data" (click)="displayTaskDetails(task)">
+                        <div [appStrikeThrough]="task.isCompleted" class="task-name">
+                            {{task.name}}
+                        </div>
+                    </div>
+                    <div (click)="toggleImportantStatus(task)" class="star">
+                        <i [ngClass]="task.isImportant ? 'fa fa-star' : 'fa fa-star-o'"></i>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-container>
+    </ng-container>
+</div>
